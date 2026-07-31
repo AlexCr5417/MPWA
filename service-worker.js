@@ -1,4 +1,4 @@
-const CACHE_NAME = "MPWA-v2";
+const CACHE_NAME = "MPWA-v3";
 
 const FILES = ["./", "./index.html", "./style.css", "./app.js"];
 
