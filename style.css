@@ -1,5 +1,67 @@
+.header {
+  grid-area: header;
+  border: solid 1px;
+}
+.navbar {
+  grid-area: navbar;
+  border: solid 1px;
+}
+.main {
+  grid-area: main;
+  border: solid 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer {
+  grid-area: footer;
+  border: solid 1px;
+}
+.title {
+  text-decoration: none;
+  font-size: 40px;
+  font-family: "Courier New", Courier, monospace;
+}
+.menssage {
+  width: 200px;
+  font-size: 100px;
+  height: 100px;
+  text-align: center;
+  align-content: center;
+}
+.button {
+  width: 200px;
+  margin-top: 20px;
+  height: 40px;
+  font-size: 30px;
+  text-align: center;
+  align-content: center;
+  background-color: blueviolet;
+  border-radius: 10px;
+  color: white;
+}
+.button:hover {
+  cursor: pointer;
+}
+
 /* Móvil */
 @media (max-width: 767px) {
+  body {
+    width: 100%;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40px 1fr 40px;
+    height: 100vh;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+  }
+  .navbar{
+    display: none;
+  }
 }
 
 /* Tablet */
@@ -9,56 +71,15 @@
 /* PC */
 @media (min-width: 1024px) {
   body {
+    width: 100%;
     margin: 0;
     display: grid;
     grid-template-columns: 80px 1fr;
     grid-template-rows: 50px 0.8fr 0.2fr;
     height: 100vh;
     grid-template-areas:
-      "header" "header"
-      "navbar" "navbar"
-      "footer" "footer";
-  }
-  .header {
-    grid-area: header;
-    border: solid 1px;
-  }
-  .navbar {
-    grid-area: navbar;
-    border: solid 1px;
-  }
-  .main {
-    grid-area: main;
-    border: solid 1px;
-  }
-  .footer {
-    grid-area: footer;
-    border: solid 1px;
-  }
-  .title {
-    text-decoration: none;
-    font-size: 40px;
-    font-family: "Courier New", Courier, monospace;
-  }
-  .menssage {
-    width: 200px;
-    font-size: 100px;
-    height: 100px;
-    text-align: center;
-    align-content: center;
-  }
-  .button {
-    width: 200px;
-    margin-top: 20px;
-    height: 40px;
-    font-size: 30px;
-    text-align: center;
-    align-content: center;
-    background-color: blueviolet;
-    border-radius: 10px;
-    color: white;
-  }
-  .button:hover {
-    cursor: pointer;
+      "header header"
+      "navbar main"
+      "footer footer";
   }
 }
